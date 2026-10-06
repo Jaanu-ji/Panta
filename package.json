@@ -1,0 +1,26 @@
+{
+  "name": "panta-pulse",
+  "version": "0.1.0",
+  "description": "Live prediction-market intelligence terminal for Panta on Solana, powered by Solami real-time data.",
+  "main": "src/server.js",
+  "scripts": {
+    "setup": "node scripts/setup.js",
+    "build": "esbuild src/client/app.js --bundle --minify --format=iife --platform=browser --define:global=globalThis --outfile=public/app.js",
+    "start": "npm run build && node src/server.js",
+    "dev": "node src/server.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@solana/web3.js": "^1.99.0",
+    "buffer": "^6.0.3",
+    "dotenv": "^18.0.3",
+    "express": "^5.2.1",
+    "ws": "^8.21.3"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "typescript": "^5.9.3"
+  },
+  "type": "module",
+  "private": true
+}

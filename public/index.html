@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Panta Pulse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="dot"></span> Panta Pulse <small>live prediction-market intelligence on Solana</small></div>
+  <div class="health" id="health">connecting…</div>
+  <button id="connect" class="btn">Connect wallet</button>
+</header>
+
+<main class="grid">
+  <section class="panel list">
+    <div class="panel-head">
+      <h2>Markets</h2>
+      <input id="search" placeholder="Search…" />
+    </div>
+    <div class="tabs" id="cats"></div>
+    <div id="markets" class="markets"></div>
+  </section>
+
+  <section class="panel detail" id="detail">
+    <div class="empty">Select a market to see live odds, order flow and signals.</div>
+  </section>
+
+  <section class="panel feed">
+    <div class="panel-head"><h2>On-chain feed</h2><span class="muted">via Solami</span></div>
+    <div id="feed" class="feed-list"></div>
+  </section>
+</main>
+
+<div id="toast" class="toast"></div>
+<script src="/app.js"></script>
+</body>
+</html>
